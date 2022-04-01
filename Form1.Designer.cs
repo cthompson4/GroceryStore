@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnadd = new System.Windows.Forms.Button();
             this.btnremove = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -41,16 +42,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtQty = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtDisplay = new System.Windows.Forms.TextBox();
+            this.txtDisplay1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPath = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnadd
@@ -164,60 +169,68 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txtDisplay);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.txtDisplay1);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(230, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(506, 433);
+            this.panel3.Size = new System.Drawing.Size(506, 487);
             this.panel3.TabIndex = 9;
             // 
-            // txtDisplay
+            // txtDisplay1
             // 
-            this.txtDisplay.Location = new System.Drawing.Point(16, 45);
-            this.txtDisplay.Multiline = true;
-            this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.ReadOnly = true;
-            this.txtDisplay.Size = new System.Drawing.Size(464, 375);
-            this.txtDisplay.TabIndex = 1;
+            this.txtDisplay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplay1.Location = new System.Drawing.Point(190, 45);
+            this.txtDisplay1.Multiline = true;
+            this.txtDisplay1.Name = "txtDisplay1";
+            this.txtDisplay1.ReadOnly = true;
+            this.txtDisplay1.Size = new System.Drawing.Size(301, 429);
+            this.txtDisplay1.TabIndex = 1;
+            this.txtDisplay1.TextChanged += new System.EventHandler(this.txtDisplay_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(185, 13);
+            this.label4.Location = new System.Drawing.Point(271, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "Current List:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtPath);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnLoad);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txtFileName);
             this.panel2.Location = new System.Drawing.Point(12, 261);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(212, 184);
+            this.panel2.Size = new System.Drawing.Size(212, 238);
             this.panel2.TabIndex = 2;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(103, 90);
+            this.btnSave.Location = new System.Drawing.Point(103, 171);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 40);
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSaved);
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(17, 90);
+            this.btnLoad.Location = new System.Drawing.Point(17, 171);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(80, 40);
             this.btnLoad.TabIndex = 8;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoaded);
             // 
             // label5
             // 
@@ -236,6 +249,35 @@
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(190, 22);
             this.txtFileName.TabIndex = 4;
+            this.txtFileName.TextChanged += new System.EventHandler(this.txtFileName_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(181, 481);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(30, 83);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 20);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Enter File Path:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // txtPath
+            // 
+            this.txtPath.Location = new System.Drawing.Point(10, 116);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.Size = new System.Drawing.Size(190, 22);
+            this.txtPath.TabIndex = 11;
             // 
             // Form1
             // 
@@ -253,6 +295,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,7 +320,10 @@
         private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.TextBox txtDisplay;
+        private System.Windows.Forms.TextBox txtDisplay1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtPath;
     }
 }
 

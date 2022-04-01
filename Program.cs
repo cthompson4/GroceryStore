@@ -94,7 +94,7 @@ namespace GroceryStore {
             string result = "";
             foreach (Item item in items)
             {
-                result = result + item + "\n";
+                result = result + item + "\r\n";
             }
             return result;
         }
@@ -105,11 +105,18 @@ namespace GroceryStore {
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            List<Item> items = new List<Item>();
-            ItemController itemController = new ItemController(items);
-            Application.Run(new Form1(itemController));
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                List<Item> items = new List<Item>();
+                ItemController itemController = new ItemController(items);
+                Application.Run(new Form1(itemController));
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong! Make sure you have entered a value for everything.");
+                MessageBox.Show(Convert.ToString(ex));
+            }
 
         }
     }
