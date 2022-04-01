@@ -1,0 +1,11 @@
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\bin\Debug\GroceryStore.exe.config
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\bin\Debug\GroceryStore.exe
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\bin\Debug\GroceryStore.pdb
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\obj\Debug\GroceryStore.csproj.AssemblyReference.cache
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\obj\Debug\GroceryStore.csproj.SuggestedBindingRedirects.cache
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\obj\Debug\GroceryStore.Form1.resources
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\obj\Debug\GroceryStore.Properties.Resources.resources
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\obj\Debug\GroceryStore.csproj.GenerateResource.cache
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\obj\Debug\GroceryStore.csproj.CoreCompileInputs.cache
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\obj\Debug\GroceryStore.exe
+C:\Users\Connor\Source\Repos\cthompson4\GroceryStore\obj\Debug\GroceryStore.pdb
