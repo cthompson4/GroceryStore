@@ -12,14 +12,11 @@ namespace GroceryStore
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private ItemController itemController;
+        public Form1(ItemController itemController)
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("You clicked the Create User button!");
+            this.itemController = itemController;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -63,6 +60,33 @@ namespace GroceryStore
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd(object sender, EventArgs e)
+        {
+            string name = txtName.Text;
+            double price = Convert.ToDouble(txtPrice.Text);
+            int qty = Convert.ToInt32(txtQty.Text);
+            int luxury;
+            if (!chkLuxury.Checked)
+            {
+                luxury = 0;
+            }
+            else
+            {
+                luxury = 1;
+            }
+            itemController.AddItem(name, price, qty, luxury);
+            MessageBox.Show(itemController.GetItemsAsString());
+        }
+        private void btnRemove(object sender, EventArgs e)
+        {
+            int place = 0;
+            itemController.RemoveItem(place);
+        }
+        private void updateTextList()
         {
 
         }

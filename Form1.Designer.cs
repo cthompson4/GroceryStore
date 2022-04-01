@@ -36,18 +36,18 @@
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtQty = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.chkLuxury = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtQty = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtDisplay = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtFileName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtFileName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,7 +61,7 @@
             this.btnadd.TabIndex = 0;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
-            this.btnadd.Click += new System.EventHandler(this.button1_Click);
+            this.btnadd.Click += new System.EventHandler(this.btnAdd);
             // 
             // btnremove
             // 
@@ -71,6 +71,7 @@
             this.btnremove.TabIndex = 1;
             this.btnremove.Text = "Remove";
             this.btnremove.UseVisualStyleBackColor = true;
+            this.btnremove.Click += new System.EventHandler(this.btnRemove);
             // 
             // contextMenuStrip1
             // 
@@ -120,35 +121,6 @@
             this.panel1.Size = new System.Drawing.Size(212, 243);
             this.panel1.TabIndex = 7;
             // 
-            // txtQty
-            // 
-            this.txtQty.Location = new System.Drawing.Point(70, 105);
-            this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(100, 22);
-            this.txtQty.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Qty:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Name:";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            // 
             // chkLuxury
             // 
             this.chkLuxury.AutoSize = true;
@@ -161,6 +133,35 @@
             this.chkLuxury.UseVisualStyleBackColor = true;
             this.chkLuxury.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Name:";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Qty:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // txtQty
+            // 
+            this.txtQty.Location = new System.Drawing.Point(70, 105);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(100, 22);
+            this.txtQty.TabIndex = 7;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.txtDisplay);
@@ -169,6 +170,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(506, 433);
             this.panel3.TabIndex = 9;
+            // 
+            // txtDisplay
+            // 
+            this.txtDisplay.Location = new System.Drawing.Point(16, 45);
+            this.txtDisplay.Multiline = true;
+            this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.ReadOnly = true;
+            this.txtDisplay.Size = new System.Drawing.Size(464, 375);
+            this.txtDisplay.TabIndex = 1;
             // 
             // label4
             // 
@@ -179,15 +189,6 @@
             this.label4.Size = new System.Drawing.Size(141, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "Current List:";
-            // 
-            // txtDisplay
-            // 
-            this.txtDisplay.Location = new System.Drawing.Point(16, 45);
-            this.txtDisplay.Multiline = true;
-            this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.ReadOnly = true;
-            this.txtDisplay.Size = new System.Drawing.Size(464, 375);
-            this.txtDisplay.TabIndex = 1;
             // 
             // panel2
             // 
@@ -200,12 +201,23 @@
             this.panel2.Size = new System.Drawing.Size(212, 184);
             this.panel2.TabIndex = 2;
             // 
-            // txtFileName
+            // btnSave
             // 
-            this.txtFileName.Location = new System.Drawing.Point(10, 40);
-            this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(190, 22);
-            this.txtFileName.TabIndex = 4;
+            this.btnSave.Location = new System.Drawing.Point(103, 90);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(80, 40);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(17, 90);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(80, 40);
+            this.btnLoad.TabIndex = 8;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -218,23 +230,12 @@
             this.label5.Text = "Enter File Name:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // btnLoad
+            // txtFileName
             // 
-            this.btnLoad.Location = new System.Drawing.Point(17, 90);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(80, 40);
-            this.btnLoad.TabIndex = 8;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(103, 90);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(80, 40);
-            this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.txtFileName.Location = new System.Drawing.Point(10, 40);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(190, 22);
+            this.txtFileName.TabIndex = 4;
             // 
             // Form1
             // 
@@ -271,12 +272,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDisplay;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.TextBox txtDisplay;
     }
 }
 
